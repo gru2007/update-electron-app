@@ -164,11 +164,11 @@ function initUpdater(opts: ReturnType<typeof validateInput>) {
 
         const dialogOpts = {
           type: 'info',
-          buttons: ['Restart', 'Later'],
-          title: 'Application Update',
+          buttons: ['Перезапуск', 'Позже'],
+          title: 'Доступно обновление',
           message: process.platform === 'win32' ? releaseNotes : releaseName,
           detail:
-            'A new version has been downloaded. Restart the application to apply the updates.',
+            'Новая версия лаунчера загружена. Перезапустите приложение, чтобы установить.',
         };
 
         dialog.showMessageBox(dialogOpts).then(({ response }) => {
